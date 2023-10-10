@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirect Page</title>
+  </head>
+  <body>
+    <script>
+      // Function to detect the user's device type
+      function detectDeviceAndRedirect() {
+        var userAgent = navigator.userAgent;
+
+        // Check for Android
+        if (userAgent.match(/Android/i)) {
+          // Redirect Android users to the Google Play Store
+          window.location.href =
+            "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd&pcampaignid=web_share";
+        }
+        // Check for iOS
+        else if (userAgent.match(/iPhone|iPad|iPod/i)) {
+          // Redirect iOS users to the Apple App Store
+          window.location.href =
+            "https://apps.apple.com/kr/app/aliexpress-shopping-app/id436672029?l=en-GB&ppid=b5f9f919-df60-4e59-83d7-429d31e9cf48";
+        }
+        // For PC or Mac users, redirect to the general website
+        else {
+          window.location.href = "https://zapapp.net/";
+        }
+      }
+
+      // Call the function to detect and redirect on page load
+      detectDeviceAndRedirect();
+    </script>
+  </body>
+</html>
